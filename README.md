@@ -1,61 +1,73 @@
-# Magic 8-Ball [![License](https://img.shields.io/github/license/Chris-1101/boxecho.svg)](https://github.com/Chris-1101/boxecho/blob/master/LICENSE.md)
-![Magic 8-Ball](https://user-images.githubusercontent.com/28808441/54500297-a30d1900-491b-11e9-84e5-2b82606b9ccb.png)
+![Beachy Beachy Ball Logo](./images/logo_bg_blue.png)
 
-### Run the Server Locally
-```
-git clone https://github.com/Chris-1101/magic-8ball.git && \
-cd magic-8ball && \
-npm install && \
-npm start
-```
-You should be able to access the server at [http://localhost:3000](http://localhost:3000)
+## Features
 
-### Project Overview
-|      Role | Framework    |
-| --------: | ------------ |
-|  Back-End | Node.js      |
-| Front-End | React.js     |
-|  REST API | Express.js   |
-|       ORM | Sequelise.js |
-|        DB | SQLite       |
+## Technologies
 
-### Directory Structure
-```
-app
-├─ db/
-│  └─ config.js        (database config, migration and seeds)
-├─ models/             (sequelise models)
-│  ├─ answerType.js
-│  ├─ answer.js
-│  └─ question.js
-├─ public/             (static resources)
-│  ├─ images/
-│  │  └─ ...
-│  ├─ javascripts/
-│  │  └─ ajax.js       (AJAX script to send requests without refreshing page)
-│  └─ stylesheets/
-│     └─ style.less    (main stylesheet)
-├─ routes/
-│  ├─ index.js         (router/controller for requests to /)
-│  └─ stats.js         (router/controller for requests to /stats)
-└─ views/
-   └─ ...              (react view templates)
-app.js                 (entry point/server)
-```
+The core technologies used are _JavaScript_ and _WebGL_. The following libraries and tools are used:
 
-### Database Schema
-![DB Schema](https://user-images.githubusercontent.com/28808441/54500298-a30d1900-491b-11e9-9bd6-7d7e09d0464b.png)
+| Name              | License | Description                                  |
+| ----------------- | :-----: | -------------------------------------------- |
+| React             |   MIT   | Component-based, front-end interface library |
+| Three.js          |   MIT   | 3D graphics API for the web, based on WebGL  |
+| React Three Fiber |   MIT   | A React renderer for Three.js                |
+| Drei              |   MIT   | Useful helpers for React Three Fiber         |
+| Zustand           |   MIT   | State management                             |
+| Vite              |   MIT   | Frontend development tooling                 |
 
-### Potential Imporvements
-* Divide `style.less` into component modules
-* Improve 8-ball reply animations
-* Cleaner `Sequelise` setup
-* Statistics Page Style
-* `Delete` CRUD Route
-* Open Graph Headers
-* Responsive Design
-* Write Tests + CI
+## Screenshots
 
-### Plotly API Limits :warning:
+![Screenshot](./screenshots/screenshot_001.png)
+![Screenshot](./screenshots/screenshot_002.png)
+![Screenshot](./screenshots/screenshot_003.png)
+![Screenshot](./screenshots/screenshot_004.png)
+![Screenshot](./screenshots/screenshot_005.png)
+![Screenshot](./screenshots/screenshot_006.png)
 
-The service used for the statistics charts has a limit on API calls for free accounts like mine. Just a heads up in case the statistics page stop updating!
+## Roadmap
+
+## Gameplay and Rules
+
+The player controls a beach ball, and has to hit the star at the end of the level in order to win, while avoiding a variety of obstacles. If the ball falls off the level, the game restarts with the ball in its initial position.
+
+### Controls
+
+|  Button(s)   |           Action            |
+| :----------: | :-------------------------: |
+| ←↑→↓ or WASD |            Move             |
+|    Space     |            Jump             |
+|    Enter     |  Start game (on main menu)  |
+|      M       |         Mute/Unmute         |
+|      R       |           Restart           |
+|      P       |   Show performance stats    |
+|     Esc      | Toggle menu modal (in game) |
+
+## Software Used
+
+A non-exhaustive list of all the software that was used during the development of _Beachy Beachy Ball_.
+
+- Visual Studio Code
+- Figma
+- Blender
+- Adobe Photoshop
+- Inkscape
+- Google Chrome
+- Microsoft Edge
+- Mozilla Firefox
+
+## Assets
+
+All the assets used (3D models, images etc.) are either using Creative Commons / Public Domain or they were created by me.
+
+## 💖 Support the Project
+
+Thank you so much for your interest in my project! If you want to go a step further and support my open source work, buy me a coffee:
+
+<a href='https://ko-fi.com/michaelkolesidis' target='_blank'><img src='https://cdn.ko-fi.com/cdn/kofi1.png' style='border:0px;height:45px;' alt='Buy Me a Coffee at ko-fi.com' /></a>
+
+## License
+
+<a href="https://www.gnu.org/licenses/agpl-3.0.html"><img src="https://upload.wikimedia.org/wikipedia/commons/0/06/AGPLv3_Logo.svg" height="100px" /></a>
+
+Copyright (c) 2023 Michael Kolesidis<br>
+Licensed under the [GNU Affero General Public License v3.0](https://www.gnu.org/licenses/agpl-3.0.html).
