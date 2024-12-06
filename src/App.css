@@ -1,7 +1,144 @@
-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  background-color: #25b8f2;
 }
 
+.font-60 {
+  font-size: 60px;
+}
+
+.font-20 {
+  font-size: 20px;
+}
+
+.container {
+  text-align: center;
+}
+
+.eight-ball-container {
+  display: inline-block;
+  width: 285px;
+  max-width: 100%;
+  text-align: center;
+}
+
+.eight-ball-img {
+  width: 100%;
+}
+
+.shake {
+  animation: shake 1s;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(4px, 4px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-4px, -4px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-7px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(7px, 4px) rotate(0deg);
+  }
+  40% {
+    transform: translate(4px, -4px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-4px, 4px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-7px, 4px) rotate(0deg);
+  }
+  70% {
+    transform: translate(7px, 4px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-4px, -4px) rotate(1deg);
+  }
+  90% {
+    transform: translate(4px, 4px) rotate(0deg);
+  }
+  100% {
+    transform: translate(4px, -4px) rotate(-1deg);
+  }
+}
+
+.answer {
+  margin-bottom: 1rem;
+}
+
+input {
+  outline: none;
+  border: none;
+  border-radius: 50px;
+  margin-bottom: 1rem;
+  padding: 0.4em;
+  text-align: center;
+}
+
+button {
+  display: inline-block;
+  cursor: pointer;
+  background: #585858;
+  padding: 0.75em 1.5em;
+  margin-bottom: 0.5rem;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  outline: none;
+  transition: all 0.4s ease 0s;
+}
+
+button:hover,
+button:focus {
+  background: #f25f25;
+  text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+  box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  transition: all 0.4s ease 0s;
+}
+
+.modal {
+  display: block;
+  width: 600px;
+  max-width: 100%;
+  height: 400px;
+  max-height: 100%;
+  position: fixed;
+  z-index: 100;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  box-shadow: 0 0 60px 10px rgba(0, 0, 0, 0.9);
+  text-align: center;
+  border-radius: 10px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+tbody > tr {
+  border-top: 2px solid black;
+}
+
+.table-question {
+  background-color: #25b8f2;
+  border-right: 2px solid black;
+}
+
+.table-answer {
+  background-color: #f25f25;
+}
+
+.err {
+  color: red;
+  margin-bottom: 1rem;
+}
