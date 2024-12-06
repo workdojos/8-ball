@@ -1,44 +1,61 @@
-# React JS Starter
+# Magic 8-Ball [![License](https://img.shields.io/github/license/Chris-1101/boxecho.svg)](https://github.com/Chris-1101/boxecho/blob/master/LICENSE.md)
+![Magic 8-Ball](https://user-images.githubusercontent.com/28808441/54500297-a30d1900-491b-11e9-84e5-2b82606b9ccb.png)
 
-Run `npm install` and then `npm run ...`:
-
-| Command     | Description          |
-|-------------|----------------------|
-| start       | Start                |
-|  build      | Build to dist dir    |
-| test        | Run tests            |
-| test:cov    | Run tests w/coverage |
-| test:debug  | Run tests w/debugger |
-
-
-### Folder Structure
-
-No configuration or complicated folder structures, just the files you need to build your app:
-
+### Run the Server Locally
 ```
-vite-template-react
-├── node_modules
-├── public
-│   ├── favicon.svg
-└── src
-    ├── App.css
-    ├── App.jsx
-    ├── App.test.jsx
-    ├── index.css
-    ├── index.jsx
-    └── logo.svg
-    └── setupTests.js
-├── .gitignore
-├── index.html
-├── package.json
-├── vite.config.js
+git clone https://github.com/Chris-1101/magic-8ball.git && \
+cd magic-8ball && \
+npm install && \
+npm start
+```
+You should be able to access the server at [http://localhost:3000](http://localhost:3000)
+
+### Project Overview
+|      Role | Framework    |
+| --------: | ------------ |
+|  Back-End | Node.js      |
+| Front-End | React.js     |
+|  REST API | Express.js   |
+|       ORM | Sequelise.js |
+|        DB | SQLite       |
+
+### Directory Structure
+```
+app
+├─ db/
+│  └─ config.js        (database config, migration and seeds)
+├─ models/             (sequelise models)
+│  ├─ answerType.js
+│  ├─ answer.js
+│  └─ question.js
+├─ public/             (static resources)
+│  ├─ images/
+│  │  └─ ...
+│  ├─ javascripts/
+│  │  └─ ajax.js       (AJAX script to send requests without refreshing page)
+│  └─ stylesheets/
+│     └─ style.less    (main stylesheet)
+├─ routes/
+│  ├─ index.js         (router/controller for requests to /)
+│  └─ stats.js         (router/controller for requests to /stats)
+└─ views/
+   └─ ...              (react view templates)
+app.js                 (entry point/server)
 ```
 
-## Credits
+### Database Schema
+![DB Schema](https://user-images.githubusercontent.com/28808441/54500298-a30d1900-491b-11e9-9bd6-7d7e09d0464b.png)
 
-Customizations by Joel Burton (joel@rithmschool.com), based on the
-Vite Template React, which is built and maintained by [Safdar Jamal](https://safdarjamal.github.io).
+### Potential Imporvements
+* Divide `style.less` into component modules
+* Improve 8-ball reply animations
+* Cleaner `Sequelise` setup
+* Statistics Page Style
+* `Delete` CRUD Route
+* Open Graph Headers
+* Responsive Design
+* Write Tests + CI
 
-## License
+### Plotly API Limits :warning:
 
-This project is licensed under the terms of the [MIT license](https://github.com/SafdarJamal/vite-template-react/blob/main/LICENSE).
+The service used for the statistics charts has a limit on API calls for free accounts like mine. Just a heads up in case the statistics page stop updating!
