@@ -1,60 +1,38 @@
 {
-  "name": "threejs-billiard",
-  "version": "0.0.1",
-  "description": "A billiard ball physics simulator based on three.js",
-  "main": "./app/scripts/threejs-billiard.js",
-  "directories": {
-    "test": "test"
+  "name": "react-eight-ball",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "test": "karma start"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/justphil/threejs-billiard.git"
-  },
-  "keywords": [
-    "billiard",
-    "threejs",
-    "physics",
-    "game",
-    "simulation"
-  ],
-  "author": {
-    "name": "Philipp Tarasiewicz",
-    "email": "philipp.tarasiewicz@angularjs.de",
-    "url": "http://angularjs.de/"
-  },
-  "license": "Apache License v2.0",
-  "bugs": {
-    "url": "https://github.com/justphil/threejs-billiard/issues"
-  },
-  "homepage": "https://github.com/justphil/threejs-billiard",
-  "devDependencies": {
-    "karma": "^0.12.4",
-    "karma-jasmine": "^0.1.5",
-    "karma-chrome-launcher": "^0.1.3",
-    "karma-browserifast": "^0.5.0",
-    "gulp": "^3.6.0",
-    "gulp-clean": "^0.2.4",
-    "gulp-concat": "^2.2.0",
-    "gulp-rename": "^1.2.0",
-    "gulp-uglify": "^0.2.1",
-    "gulp-inject": "^0.4.1",
-    "gulp-streamify": "0.0.5",
-    "browserify": "^3.41.0",
-    "browserify-shim": "^3.4.1",
-    "vinyl-source-stream": "^0.1.1",
-    "stream-series": "^0.1.0"
-  },
-  "browserify": {
-    "transform": [
-      "browserify-shim"
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
     ]
   },
-  "browserify-shim": {
-    "three": "global:THREE",
-    "detector": "global:Detector",
-    "q": "global:Q"
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
